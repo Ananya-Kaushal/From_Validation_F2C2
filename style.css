@@ -1,11 +1,21 @@
-.element{
-    display: grid;
-    justify-content: space-around;
-    gap: 20px;
-    padding: 20px 0px;
+* {
+    margin: 0px;
+    padding: 0px;
 }
 
+.element
+{
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: 700px;
+    gap: 5px;
+    padding: 20px;
+}
 .btn
 {
     display: table-cell;
+}
+
+p{
+    color: #FF0000;
 }
