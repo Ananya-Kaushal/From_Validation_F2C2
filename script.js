@@ -10,7 +10,7 @@ let btn=document.querySelector("button");
 email_box.addEventListener("change",validateEmail);
 
 function validateEmail(e) {
-    e.preventDefault();
+    //e.preventDefault();
     let email=email_box.value;
     if(!email.includes("@") || !email.includes("."))
     {
@@ -19,19 +19,20 @@ function validateEmail(e) {
     else if(email.includes("@") || email.includes(".")){
         //validatePassword();
         error1_box.textContent="";
+        
     }
 }
 
 password_box.addEventListener("change",validatePassword);
 
 function validatePassword(e) {
-    e.preventDefault();
+    //e.preventDefault();
     let password=password_box.value;
     if(password.length<=8)
     {
         alert("Please, Fill all Feilds.");
     }
-    else{
+    else if(password.length>8 && error1_box.textContent==""){
         validateEmail();
         error2_box.textContent="All good to go!";
         error2_box.style.color="#219F35";
@@ -53,7 +54,7 @@ function validateForm(e) {
         alert("Please, Fill all the Fields.");
     }
 
-    if(error_2.textContent=="All good to go!")
+    if(error2_box.textContent=="All good to go!")
     {
         // error1_box.remove();
         // error2_box.textContent="All good to go!";
