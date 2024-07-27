@@ -33,7 +33,7 @@ function validatePassword(e) {
         alert("Please, Fill all Feilds.");
     }
     else if(password.length>8 && error1_box.textContent==""){
-        validateEmail();
+        //validateEmail();
         error2_box.textContent="All good to go!";
         error2_box.style.color="#219F35";
         //validateEmail();
