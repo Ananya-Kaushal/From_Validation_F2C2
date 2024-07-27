@@ -12,11 +12,11 @@ email_box.addEventListener("change",validateEmail);
 function validateEmail(e) {
     //e.preventDefault();
     let email=email_box.value;
-    if(!email.includes("@") || !email.includes("."))
+    if(!email.includes("@") || !email.includes(".") || email.length<=3)
     {
         alert("Please, Fill all Feilds.");
     }
-    else if(email.includes("@") || email.includes(".")){
+    else if(email.includes("@") && email.includes(".") && email.length>3){
         //validatePassword();
         error1_box.textContent="";
         
@@ -47,20 +47,18 @@ function validateForm(e) {
     // console.log("Button Clicked");
     let email=email_box.value;
     let password=password_box.value;
-    // let e1=error1_box.value;
-     let e2=error2_box.value;
+    let e2=error2_box.value;
+
+    //validateEmail();
+    //validatePassword();
 
     if(email=="" || password.length<=8)
     {
-        alert("Please, Fill all the Fields.");
+        alert("Please, Fill all Fields.");
     }
 
     if(error2_box.textContent=="All good to go!")
     {
-        // error1_box.remove();
-        // error2_box.textContent="All good to go!";
-        // error2_box.style.color="#219F35";
-        //confirm("Are you sure you want to sign up?");
         if(confirm("Are you sure you want to sign up?"))
         {
             alert("Successful SignUp!");
